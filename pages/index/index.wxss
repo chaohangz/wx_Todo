@@ -12,3 +12,28 @@
   height: 100rpx;
   background: #fbf9fe;
 }
+
+.main {
+  padding: 20rpx;
+}
+
+.todo {
+  overflow: hidden;
+  padding: 12rpx 0;
+}
+
+.checkbox {
+  padding-right: 20rpx;
+}
+
+.todo_text {
+  display: inline-block;
+}
+
+.delete {
+  align-items: center;
+  font-size: 12px;
+  padding: 0 .8rem;
+  float: right;
+}
+

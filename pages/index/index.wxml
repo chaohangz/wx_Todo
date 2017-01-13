@@ -4,4 +4,13 @@
   <view class="new_todo">
     <input type="text" placeholder="What needs to be done" maxlength="80"/>
   </view>
+  <view class="main" wx:if="{{ todos.length }}">
+    <view class="todo_list" wx:for="{{ todos }}">
+      <view class="todo">
+        <checkbox class="checkbox" />
+        <view class="todo_text">{{ item }}</view>
+        <button class="delete" size="mini" type="warn" plain>删除</button>
+      </view>
+    </view>
+  </view>
 </view>
