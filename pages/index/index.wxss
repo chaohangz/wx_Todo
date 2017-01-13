@@ -1,0 +1,14 @@
+.title {
+  font-size: 60rpx;
+  text-align: center;
+}
+
+.new_todo {
+  padding-top: 60rpx;
+}
+
+.new_todo input {
+  text-align: center;
+  height: 100rpx;
+  background: #fbf9fe;
+}

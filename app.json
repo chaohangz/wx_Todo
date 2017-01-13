@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/tomato/tomato"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "番茄 todo",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#959595",
+    "selectedColor": "#56b621",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "Todo",
+      "iconPath": "img/todo.png",
+      "selectedIconPath": "img/selected_todo.png"
+    },{
+      "pagePath": "pages/tomato/tomato",
+      "text": "tomoto",
+      "iconPath": "img/time.png",
+      "selectedIconPath": "img/selected_time.png"
+    }]
+  }
+}

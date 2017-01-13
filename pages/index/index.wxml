@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">TODOLIST</view>
+  <view class="new_todo">
+    <input type="text" placeholder="What needs to be done" maxlength="80"/>
+  </view>
+</view>
