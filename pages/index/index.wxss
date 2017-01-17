@@ -22,12 +22,19 @@
   padding: 12rpx 0;
 }
 
+.complete {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
+
 .checkbox {
+  float: left;
   padding-right: 20rpx;
 }
 
 .todo_text {
-  display: inline-block;
+  width: 450rpx;
+  float: left;
 }
 
 .delete {
@@ -35,5 +42,6 @@
   font-size: 12px;
   padding: 0 .8rem;
   float: right;
+  background: white;
 }
 

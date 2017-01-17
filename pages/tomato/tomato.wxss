@@ -1,0 +1,20 @@
+.time {
+    text-align: center;
+}
+
+.button {
+    margin: 10rpx 20rpx;
+}
+
+.begin, .rest {
+    margin: 10rpx;
+}
+
+.bell {
+    padding: 60rpx 0;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: 200rpx;
+    color: #1AAD19;
+}

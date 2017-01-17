@@ -1,1 +1,10 @@
-<view>这里是 tomato</view>
+<view class="container">
+    <view class="time">
+        <button class="button" size="mini" type="primary" plain bindtap="setTime" data-time="30:00" disabled="{{ able }}">30分钟</button>
+        <button class="button" size="mini" type="primary" plain bindtap="setTime" data-time="60:00" disabled="{{ able }}">60分钟</button>
+        <button class="button" size="mini" type="primary" plain bindtap="setTime" data-time="90:00" disabled="{{ able }}">90分钟</button>
+    </view>
+    <view class="bell">{{ time }}</view>
+    <button class="begin" type="primary" bindtap="begin" disabled="{{ able }}">计时开始</button>
+    <button class="rest" type="default" bindtap="rest" disabled="{{ able }}">休息一下</button>
+</view>

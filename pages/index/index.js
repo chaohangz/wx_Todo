@@ -3,23 +3,33 @@
 var app = getApp()
 Page({
   data: {
-    todos: ["one", "two", "three", "ninininininininininininininininiininininini"]
+    todos: ["吃饭", "睡觉", "打豆豆"],
+    userInput: ''
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  // 添加todo
+  addTodo: function(event) {
+    var inputValue = event.detail.value
+    if (!inputValue) return
+    this.data.todos.push(inputValue)
+    this.setData({
+      todos: this.data.todos,
+      userInput: ''
+     })
   },
-  onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
-    })
-  }
+
+  // 删除todo
+  removeTodo: function(event) {
+    var todos = this.data.todos
+    var todo = event.target.dataset.todo
+    todos.splice(todos.indexOf(todo), 1)
+    this.setData({todos: todos})
+  },
+
+  onShareAppMessage: function () {
+      return {
+          title: '番茄todo',
+          desc: '待办事项和番茄时钟',
+          path: '/index/index'
+      }
+  },
 })
