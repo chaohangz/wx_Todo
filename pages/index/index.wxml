@@ -5,11 +5,13 @@
     <input type="text" placeholder="What needs to be done" maxlength="40" bindconfirm="addTodo" value="{{ userInput }}"/>
   </view>
   <view class="main" wx:if="{{ todos.length }}">
-    <view class="todo_list" wx:for="{{ todos }}" wx:for-item="todo">
+    <view class="todo_list" wx:for="{{ todos }}" wx:for-item="todo" wx:key="index">
       <view class="todo">
-        <checkbox class="checkbox" />
-        <view class="todo_text">{{ todo }}</view>
-        <button class="delete" size="mini" type="warn" plain bindtap="removeTodo" data-todo="{{ todo }}">删除</button>
+        <view class="inner todo_text" style="{{ todo.textStyle }}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{ index }}">
+          <checkbox class="checkbox" />
+          {{ todo.text }}
+        </view>
+        <view class="inner delete" bindtap="removeTodo" data-index="{{ index }}" >删除</view>
       </view>
     </view>
   </view>
