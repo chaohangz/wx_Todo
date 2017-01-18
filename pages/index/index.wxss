@@ -19,10 +19,10 @@
   line-height: 100rpx;
 }
 
-/*.complete {
+.complete {
   color: #d9d9d9;
   text-decoration: line-through;
-}*/
+}
 
 .inner {
   position: absolute;

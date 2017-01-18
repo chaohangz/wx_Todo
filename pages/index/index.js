@@ -5,17 +5,29 @@ Page({
   data: {
     todos: [{
       text: '左滑删除',
-      textStyle: ''
+      textStyle: '',
+      complete: false
     }, {
-      text: '左滑删除',
-      textStyle: ''
+      text: '吃饭',
+      textStyle: '',
+      complete: false
     }, {
-      text: '左滑删除',
-      textStyle: ''
+      text: '睡觉',
+      textStyle: '',
+      complete: false
+    }, {
+      text: '打豆豆打豆豆打豆豆打豆豆打豆豆打豆豆打豆豆打豆豆',
+      textStyle: '',
+      complete: false
     }],
     userInput: '',
-    delBtnWidth: "140", //删除按钮宽度，不要带尺寸
+    delBtnWidth: '140', //删除按钮宽度，不要带尺寸
   },
+
+  // onLoad: function(options) {
+  //   // 页面初始化 options为页面跳转所带来的参数
+  //   this.initEleWidth()
+  // },
 
   // 添加todo
   addTodo: function(event) {
@@ -24,7 +36,8 @@ Page({
     if (!inputValue) return
     var todo = {
       text: inputValue,
-      textStyle: ''
+      textStyle: '',
+      complete: false
     }
     todos.push(todo)
     this.setData({
@@ -38,7 +51,24 @@ Page({
     var todos = this.data.todos
     var index = event.target.dataset.index
     todos.splice(index, 1)
-    this.setData({todos: todos})
+    this.setData({
+      todos: todos
+    })
+  },
+
+  // 完成todo,更新样式
+  complete: function(event) {
+    var todos = this.data.todos
+    var index = event.target.dataset.index
+    var complete = todos[index].complete
+    if (!complete) {
+      todos[index].complete = "complete"
+    } else {
+      todos[index].complete = false
+    }
+    this.setData({
+      todos: todos
+    })
   },
 
   // 滑动
@@ -104,6 +134,7 @@ Page({
     }
   },
 
+  // 初始化宽度
   initEleWidth: function() {
     var delBtnWidth = this.getEleWidth(this.data.delBtnWidth)
     this.setData({
